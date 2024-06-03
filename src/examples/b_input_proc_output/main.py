@@ -1,3 +1,8 @@
-import input_process_output
+whole_number = 10 # an integer variable
+print(whole_number + 10)
 
-input_process_output.display_output()
+float_number = 10.99 #float variable
+print(float_number + 5.55)
+
+name = "Python" #a literal string
+print(name + " is cool")
