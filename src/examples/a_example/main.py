@@ -1,5 +1,5 @@
 import devprocess
 
-result = devprocess.add_numbers(5, 5)
+#result = devprocess.add_numbers(5, 5) as a comment not as code
 
-print(result)
+devprocess.hello()
