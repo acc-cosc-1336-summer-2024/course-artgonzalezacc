@@ -1,8 +1,11 @@
-whole_number = 10 # an integer variable
-print(whole_number + 10)
+import input_process_output #references input_process_output.py file
 
-float_number = 10.99 #float variable
-print(float_number + 5.55)
+integer = input_process_output.echo_number(5) #echo_number function is in the input_process_output.py file
+print(integer)
 
-name = "Python" #a literal string
-print(name + " is cool")
+float = input_process_output.echo_decimal_number(10.5)  #echo_decimal_number function is in the input_process_output.py file
+print(float)
+
+string = input_process_output.echo_string("Python")  #echo_string function is in the input_process_output.py file
+print(string) #print is a builtin Python function
+
