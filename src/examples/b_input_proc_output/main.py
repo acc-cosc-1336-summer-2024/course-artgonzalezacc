@@ -1,11 +1,13 @@
 import input_process_output #references input_process_output.py file
 
-integer = input_process_output.echo_number(5) #echo_number function is in the input_process_output.py file
-print(integer)
+value1 = 10
+value2 = 4
 
-float = input_process_output.echo_decimal_number(10.5)  #echo_decimal_number function is in the input_process_output.py file
-print(float)
+result = value1 / value2 #will do decimal operation
+print(result)
 
-string = input_process_output.echo_string("Python")  #echo_string function is in the input_process_output.py file
-print(string) #print is a builtin Python function
+result = value1 // value2 #will do a whole number operation
+print(result)
 
+result = 2% 2
+print(result)
