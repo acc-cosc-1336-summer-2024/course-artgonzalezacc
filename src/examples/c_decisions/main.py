@@ -5,5 +5,8 @@ value1 = input("Enter a number: ") #read form keyboard , Python brings in values
 
 result = decisions.is_number_not_in_range(int(value1), 1, 10) #convert value to an integer number with the int function
 
+if(result == True):
+    print(value1, " not in range")
+
 print(result)
 
