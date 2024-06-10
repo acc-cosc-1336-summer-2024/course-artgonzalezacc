@@ -20,3 +20,8 @@ def sum_of_squares(num):
     
     return sum
 
+def display_number_for(num):
+
+    for val in range(0, num) :
+        print(val+1)
+
