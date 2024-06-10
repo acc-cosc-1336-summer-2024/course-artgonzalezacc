@@ -1,4 +1,6 @@
 import repetition
 
-repetition.display_numbers(3)
+result = repetition.sum_of_squares(5)
+
+print(result)
 
