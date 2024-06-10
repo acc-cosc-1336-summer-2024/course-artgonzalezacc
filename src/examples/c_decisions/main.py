@@ -1,8 +1,9 @@
 import decisions
 
-value1 = input("Enter a number: ") #read form keyboard , Python brings in values as a string variable
+num1 = 1
+num2 = 3
+num3 = 4
 
-generation = decisions.get_generation(int(value1))
-
-print(generation)
-
+#short-circuit evaluation
+if(num1 > num2 and num2 < num3):
+    print('lkjlkj')
