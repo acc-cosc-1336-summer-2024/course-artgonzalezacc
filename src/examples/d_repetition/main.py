@@ -1,3 +1,3 @@
 import repetition
 
-repetition.display_number_for(3)
+repetition.while_nested_loop(3)
