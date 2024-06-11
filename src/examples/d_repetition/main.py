@@ -1,3 +1,3 @@
 import repetition
 
-repetition.for_nested_loop(3)
+repetition.for_multiplication_table(10, 10)
