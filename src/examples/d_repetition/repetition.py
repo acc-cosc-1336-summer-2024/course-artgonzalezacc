@@ -63,6 +63,11 @@ def while_multiplication_table(row, col):
 
         print(" ")
 
+def for_nested_loop(num):
 
+    for i in range(0, num):
+        print('Waiting for inner loop')
 
+        for j in range(0, num):
+            print('\t inner loop')
 
