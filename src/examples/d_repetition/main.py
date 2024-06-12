@@ -1,3 +1,3 @@
 import repetition
 
-repetition.user_controlled_loop()
+repetition.run_menu()
