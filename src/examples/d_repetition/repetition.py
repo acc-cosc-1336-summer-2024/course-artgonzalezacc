@@ -81,6 +81,12 @@ def for_multiplication_table(row, col):
 
         print(" ")
 
+def user_controlled_loop():
+
+    choice = 'Y'
+
+    while(choice == 'Y' or choice == 'y'):
+        choice = input("Enter Y to continue: ")
 
 
 
