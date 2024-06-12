@@ -1,3 +1,3 @@
 import repetition
 
-repetition.run_menu()
+repetition.validate_input_w_while()

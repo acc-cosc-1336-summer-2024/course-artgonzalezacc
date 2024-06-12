@@ -113,6 +113,13 @@ def option_1():
 def option_2():
     print('user selected option 2')
 
+def validate_input_w_while():
+    value = 0
+
+    while(value <= 0):
+        value = int(input("Enter a value: "))
+
+    print(value)
 
 
 
