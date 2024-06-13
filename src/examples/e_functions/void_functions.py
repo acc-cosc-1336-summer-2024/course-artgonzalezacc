@@ -4,6 +4,8 @@
 def local_variables(num1, num2):
     var1 = 5
     var2 = "Python"
+    num1 = 0
+    num2 = 100
 
     print(num1, num2, var1, var2)
 
