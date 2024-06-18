@@ -29,3 +29,10 @@ def loop_string_w_for():#function header
     for i in range(0, len(lang)):
         print(lang[i])
 
+def loop_string_for_range():
+    lang = "Python"
+
+    for ch in lang:
+        print(ch)
+
+
