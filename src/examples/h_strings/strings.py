@@ -15,3 +15,11 @@ def cannot_change_string_characters():
 
     lang[0] = 'P' #can't change characters in a string
 
+def loop_string_w_while():
+    lang = "Python"
+    indx = 0
+
+    while(indx < len(lang)):
+        print(lang[indx])
+        indx += 1 #statement that eventually stops the loop
+
