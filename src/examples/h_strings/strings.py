@@ -23,3 +23,9 @@ def loop_string_w_while():
         print(lang[indx])
         indx += 1 #statement that eventually stops the loop
 
+def loop_string_w_for():#function header
+    lang = "Python is great"
+
+    for i in range(0, len(lang)):
+        print(lang[i])
+
