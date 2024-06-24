@@ -72,3 +72,9 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, 'Four score and seven days ago' == new_str)
 
+    def test_split_string_to_list(self):
+        str = "one two three"
+        word_list = str.split()
+
+        self.assertEqual(True, ["one", "two", "three"] == word_list)
+
