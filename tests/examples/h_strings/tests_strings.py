@@ -48,3 +48,27 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, lang.isalpha())
 
+    def test_string_to_lower(self):
+        str = "PYTHON"
+        str_lower =  str.lower()
+
+        self.assertEqual(True, "python" == str_lower)
+
+    def test_string_rstrip(self):
+        str = "Python     "
+        str_stripped = str.rstrip()
+
+        self.assertEqual(True, "Python" == str_stripped)
+
+    def test_find_in_string(self):
+        str = "Four score and seven years ago"
+        position = str.find("seven")
+
+        self.assertEqual(True, position != -1)
+
+    def test_replace_in_string(self):
+        str = "Four score and seven years ago"
+        new_str = str.replace('years', 'days')
+
+        self.assertEqual(True, 'Four score and seven days ago' == new_str)
+
