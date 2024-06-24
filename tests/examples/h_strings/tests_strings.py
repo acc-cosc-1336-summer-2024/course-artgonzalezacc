@@ -22,3 +22,14 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(6, len(lang))
 
+    def test_string_w_in(self):
+        lang = "Python"
+        result = 'th' in lang # will be True or False
+
+        self.assertEqual(True, result)
+
+    def test_string_w_not_in(self):
+        lang = "Python"
+
+        self.assertEqual(True, 'Th' not in lang)
+
