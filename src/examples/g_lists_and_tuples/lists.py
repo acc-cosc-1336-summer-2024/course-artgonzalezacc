@@ -40,6 +40,15 @@ def use_different_data_types_in_a_list():
 
     print(items)
 
+def return_sum_of_items(nums):
+    
+    sum = 0
+
+    for n in nums:
+        sum += n
+    
+    return sum
+
 
 
 
