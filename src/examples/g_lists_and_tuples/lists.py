@@ -71,6 +71,20 @@ def mulitiplication_matrix(rows, cols):
 
     print(list)
 
+def working_w_tuples():
+
+    read_only_list = (1,2,3,4) #tuple
+    print(read_only_list[1])
+
+    if 4 in read_only_list:
+        print('4 exists')
+
+    index = read_only_list.index(3)
+    print(index)
+
+    print(len(read_only_list))
+
+
 
 
 
