@@ -57,6 +57,20 @@ def list_within_a_list():
     print(master_list[1])
     print(master_list[2])
 
+def mulitiplication_matrix(rows, cols):
+
+    list = []
+
+    for i in range(0, rows):
+        row_list = []
+
+        for j in range(0, cols):
+            row_list.append((i+1) * (j+1))
+
+        list.append(row_list)
+
+    print(list)
+
 
 
 
