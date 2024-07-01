@@ -49,6 +49,16 @@ def return_sum_of_items(nums):
     
     return sum
 
+def list_within_a_list():
+    master_list = [[1,2,3], [4,5,6], [7,8,9]]
+    sub_list = master_list[0]
+
+    print(sub_list)
+    print(master_list[1])
+    print(master_list[2])
+
+
+
 
 
 
