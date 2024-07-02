@@ -38,3 +38,17 @@ def use_for_loop_dictionary():
 
     for keys, values in prog_langs.items():
         print(keys, values)
+
+def use_while_loop_dictionary():
+    prog_langs = {'C++':'1979', 'Java':'1992', 'Python':'1996', 'C#':'2001'} #4 pairs keys/values
+
+    keys = prog_langs.keys()
+    print(keys)
+    keys_list = list(keys)
+    print(keys_list)
+
+    indx = 0
+
+    while indx < len(keys_list):
+        print(prog_langs[keys_list[indx]])
+        indx += 1
