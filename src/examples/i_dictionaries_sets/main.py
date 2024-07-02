@@ -2,4 +2,4 @@
 
 import dictionaries
 
-dictionaries.create_dictionary()
+dictionaries.use_for_loop_dictionary()

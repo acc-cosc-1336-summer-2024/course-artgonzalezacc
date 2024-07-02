@@ -26,3 +26,15 @@ def create_dictionary():
 
     prog_langs['C#'] = 2001
     print(prog_langs)
+
+def use_for_loop_dictionary():
+    prog_langs = {'C++':'1979', 'Java':'1992', 'Python':'1996', 'C#':'2001'} #4 pairs keys/values
+
+    for current_key in prog_langs:
+        print(current_key, prog_langs[current_key])
+
+    for current_value in prog_langs.values():
+        print(current_value)
+
+    for keys, values in prog_langs.items():
+        print(keys, values)
