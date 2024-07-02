@@ -1,5 +1,5 @@
 #main program
 
-import dictionaries
+import sets
 
-dictionaries.dictionary_built_in_methods()
+sets.create_sets()
