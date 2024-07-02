@@ -2,4 +2,4 @@
 
 import dictionaries
 
-dictionaries.use_while_loop_dictionary()
+dictionaries.dictionary_built_in_methods()

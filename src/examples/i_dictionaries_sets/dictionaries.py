@@ -52,3 +52,25 @@ def use_while_loop_dictionary():
     while indx < len(keys_list):
         print(prog_langs[keys_list[indx]])
         indx += 1
+
+def dictionary_built_in_methods():
+    prog_langs = {'C++':'1979', 'Java':'1992', 'Python':'1996', 'C#':'2001'} #4 pairs keys/values
+
+    prog_langs.clear()
+    print(prog_langs)
+
+    prog_langs = {'C++':'1979', 'Java':'1992', 'Python':'1996', 'C#':'2001'} #4 pairs keys/values
+
+    value = prog_langs.get('c++', 'Key not found')
+    print(value)
+
+    value = prog_langs.get('C++', 'Key not found')
+    print(value)
+
+    item = prog_langs.popitem()
+    print(prog_langs)
+    print(item)
+
+    item = prog_langs.popitem()
+    print(prog_langs)
+    print(item)
