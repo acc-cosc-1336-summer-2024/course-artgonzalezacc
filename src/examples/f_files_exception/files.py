@@ -24,3 +24,15 @@ def read_from_file(file_name):
 
     file.close()
 
+def read_from_file_one_line_at_a_time(file_name):
+    file = open(file_name, 'r')
+
+    line1 = file.readline().rstrip('\n')
+    line2 = file.readline().rstrip('\n')
+    line3 = file.readline().rstrip('\n')
+
+    print(line1)
+    print(line2)
+    print(line3)
+
+    file.close()
