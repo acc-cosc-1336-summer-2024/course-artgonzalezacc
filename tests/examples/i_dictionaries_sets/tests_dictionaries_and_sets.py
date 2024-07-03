@@ -65,6 +65,38 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(set1.issuperset(set2), True)
 
+    def test_students_in_baseball_and_basketball(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        expected_set = set(['Jodi', 'Carmen', 'Aida', 'Alicia', 'Eva', 'Sarah'])
+
+        both_sports = baseball.union(basketball)
+
+        self.assertEqual(both_sports, expected_set)
+
+    def test_students_in_baseball_not_in_basketball(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        expected_set = set(['Jodi', 'Aida'])
+
+        only_in_baseball_set = baseball.difference(basketball)
+
+        self.assertEqual(expected_set, only_in_baseball_set)
+
+    def test_students_who_play_only_one_sport(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        expected_set = set(['Jodi', 'Aida', "Eva", "Sarah"])
+
+        both_sports_set = baseball.symmetric_difference(basketball)
+
+        self.assertEqual(expected_set, both_sports_set)
+
+
+        
+
+
+
     
 
 
