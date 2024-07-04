@@ -136,6 +136,18 @@ def read_employee_records(file_name):
         print(id, name, dept)
 
     file.close()
+
+def write_prog_lang_list(file_name):
+    file = open(file_name, 'w')
+
+    prog_langs = [['C#', '2001', 'lang'], ['Python', '1996', 'lang'], ['Java', '1991', 'lang']]
+
+    for lang in prog_langs:
+        file.write(lang[0] + '\t')# C#
+        file.write(lang[1] + '\t')# 2001
+        file.write(lang[2] + '\n')#lang
+
+    file.close()
         
 
         
