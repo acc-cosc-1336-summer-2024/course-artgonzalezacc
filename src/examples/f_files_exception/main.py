@@ -1,7 +1,7 @@
 #main program
 import files
 
-file_name = 'langs.txt'
+file_name = 'langs_dictionary.txt'
 
-files.read_prog_langs_records(file_name)
+files.read_dictionary_records(file_name)
 

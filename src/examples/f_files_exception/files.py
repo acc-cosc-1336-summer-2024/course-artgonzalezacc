@@ -169,6 +169,29 @@ def read_prog_langs_records(file_name):
 
     file.close()
 
+def write_dictionary_records(file_name):
+    file = open(file_name, 'w')
+    prog_langs = {'C++':'1979', 'Java':'1992', 'Python':'1996', 'C#':'2001'}
+
+    for key in prog_langs:
+        file.write(key + '\t')
+        file.write(prog_langs[key] + '\n')
+
+    file.close()
+
+def read_dictionary_records(file_name):
+    file = open(file_name, 'r')
+    prog_langs = {}
+
+    for line in file:
+        record = line.split('\t')#['C#', '2001']
+        key = record[0]
+        value = record[1].rstrip('\n')
+        prog_langs[key] =  value #add the key value pair to the dictionary
+
+    file.close()
+    print(prog_langs)
+
     
 
 
