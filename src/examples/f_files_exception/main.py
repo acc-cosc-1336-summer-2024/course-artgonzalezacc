@@ -3,5 +3,5 @@ import files
 
 file_name = 'langs.txt'
 
-files.write_prog_lang_list(file_name)
+files.read_prog_langs_records(file_name)
 
