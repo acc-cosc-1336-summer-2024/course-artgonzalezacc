@@ -192,6 +192,13 @@ def read_dictionary_records(file_name):
     file.close()
     print(prog_langs)
 
+def read_binary_jpg_file(file_name):
+    file = open(file_name, 'br')
+
+    content = file.read()
+
+    print(content)
+
     
 
 

@@ -1,7 +1,7 @@
 #main program
 import files
 
-file_name = 'langs_dictionary.txt'
+file_name = 'VISIT_FLORIDA_Backgrounds_Destin.jpg'
 
-files.read_dictionary_records(file_name)
+files.read_binary_jpg_file(file_name)
 
