@@ -1,3 +1,5 @@
+import pickle
+
 def test_config():
     return True
 
@@ -74,3 +76,20 @@ def dictionary_built_in_methods():
     item = prog_langs.popitem()
     print(prog_langs)
     print(item)
+
+def output_a_dictionary_to_file():
+    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+    file = open('phonebook.dat', 'wb')
+    pickle.dump(phone_book, file)
+
+    file.close()
+
+def read_a_pickled_dictionary_file():
+    file = open('phonebook.dat', 'rb')
+
+    phone_book = pickle.load(file)
+
+    print(phone_book)
+
+

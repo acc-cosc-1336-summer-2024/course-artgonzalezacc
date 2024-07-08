@@ -1,5 +1,6 @@
 #main program
 
-import sets
+import dictionaries
 
-sets.create_sets()
+#dictionaries.output_a_dictionary_to_file()
+dictionaries.read_a_pickled_dictionary_file()
