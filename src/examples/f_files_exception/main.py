@@ -1,5 +1,5 @@
 #main program
 import exceptions
 
-exceptions.multiply_two_numbers()
+exceptions.open_file_for_reading('myfile.data')
 

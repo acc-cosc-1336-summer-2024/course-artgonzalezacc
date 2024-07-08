@@ -26,4 +26,17 @@ def multiply_two_numbers():
 
      result = int(num1) * int(num2)
      print(result)
+
+def open_file_for_reading(file_name):
+
+    try:
+        file = open(file_name, 'r')
+
+        contents = file.read()
+
+        print(contents)
+
+        file.close()
+    except IOError:
+        print('Cannot read the file, not found at location ....')
  
