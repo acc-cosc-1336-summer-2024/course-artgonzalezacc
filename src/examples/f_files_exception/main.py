@@ -1,7 +1,7 @@
 #main program
-import files
+import exceptions
 
-file_name = 'VISIT_FLORIDA_Backgrounds_Destin.jpg'
+result = exceptions.divide_two_numbers(2, 4)
+print(result)
 
-files.read_binary_jpg_file(file_name)
 
