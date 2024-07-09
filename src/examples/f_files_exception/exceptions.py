@@ -81,6 +81,27 @@ def open_file_for_reading_except_else(file_name):
     else:
         print(contents)
 
+def open_file_for_reading_except_finally(file_name):
+
+    try:
+        file = open(file_name, 'r')
+
+        contents = file.read()
+
+        print(contents)
+
+        file.close()
+    except IOError:
+        print('Cannot read the file, not found at location ....')
+    finally:
+        #clean up resources(db connections, open files )
+        print('Finally always executes...')
+        
+        if 'file' in locals():
+            file.close()
+
+
+
 
 
  
