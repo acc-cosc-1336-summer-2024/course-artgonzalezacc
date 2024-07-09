@@ -68,5 +68,19 @@ def open_sales_file_for_reading(file_name):
     
     log_file.close()
 
+def open_file_for_reading_except_else(file_name):
+
+    try:
+        file = open(file_name, 'r')
+
+        contents = file.read()
+
+        file.close()
+    except IOError:
+        print('Cannot read the file, not found at location ....')
+    else:
+        print(contents)
+
+
 
  
