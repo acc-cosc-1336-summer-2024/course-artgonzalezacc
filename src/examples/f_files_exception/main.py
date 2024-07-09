@@ -1,5 +1,5 @@
 #main program
 import exceptions
 
-exceptions.open_file_for_reading('myfile.data')
+exceptions.open_sales_file_for_reading('sales.txt')
 
