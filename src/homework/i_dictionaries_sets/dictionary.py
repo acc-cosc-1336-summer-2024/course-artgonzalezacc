@@ -10,6 +10,8 @@ survey_questions_dictionary = \
 
 survey_response_options = {1:'Never',2:'Sometimes',3:'More',4:'More more',5:'Always', 6:'Always Always'}
 survey_responses_list = [] #surveyid, questionid, response
+survey_response_results = {} #key:value
+survey_response_results_totals = {'2.1':0, '2.2':0, '2.3':0, '2.4':0, '2.5':0}
 
 def display_survey_question():
 
@@ -30,3 +32,21 @@ def display_survey_question():
 
 def capture_survey_response(survey_id, question_id, response):
     survey_responses_list.append([survey_id, question_id, response])
+
+def tabulate_survey_response_results():
+
+    cnt = 0
+
+    for response in survey_responses_list:
+        print(response)
+        survey_response_results_totals[response[1]] += response[2]
+
+        if '2.5' == response[1]:
+            cnt += 1
+
+    print(survey_response_results_totals)        
+
+    for question_id, totals in survey_response_results_totals.items():
+        survey_response_results[question_id] = totals / cnt
+    
+    print(survey_response_results)
