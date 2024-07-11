@@ -9,3 +9,11 @@ while choice == 1:
 
 
 dictionary.tabulate_survey_response_results()
+
+average = dictionary.get_course_average()
+
+print(average)
+
+rating = dictionary.get_faculty_rating(average)
+
+print(rating)
