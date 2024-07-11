@@ -23,7 +23,10 @@ def display_survey_question():
         for option, value in survey_response_options.items():
             print(option, value)
 
-        response = int(input("Enter option: "))
+        response = 0
+        
+        while response < 1 or response > 6:
+            response = int(input("Enter option (1-6): "))
 
         capture_survey_response(survey_id, question_id, response)
         survey_id += 1
