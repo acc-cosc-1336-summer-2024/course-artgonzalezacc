@@ -30,8 +30,6 @@ def display_survey_question():
 
         capture_survey_response(survey_id, question_id, response)
         survey_id += 1
-        
-        print(survey_responses_list)
 
 def capture_survey_response(survey_id, question_id, response):
     survey_responses_list.append([survey_id, question_id, response])
@@ -41,18 +39,13 @@ def tabulate_survey_response_results():
     cnt = 0
 
     for response in survey_responses_list:
-        print(response)
         survey_response_results_totals[response[1]] += response[2]
 
         if '2.5' == response[1]:
             cnt += 1
 
-    print(survey_response_results_totals)        
-
     for question_id, totals in survey_response_results_totals.items():
         survey_response_results[question_id] = totals / cnt
-    
-    print(survey_response_results)
 
 def get_course_average():
     total_average = 0
@@ -84,3 +77,32 @@ def get_faculty_rating(ratio):
     
     else: 
         return 'Invalid value'
+    
+def display_menu():
+    option = 0
+
+    while option != 3:
+        print('1-Enter survey responses: ')
+        print('2-Get survey results: ')
+        print('3-Exit')
+        
+        option = int(input("Enter option: "))
+        
+        handle_menu_options(option)
+
+def handle_menu_options(option):
+
+    if(option == 1):
+        display_survey_question()
+    elif(option == 2):
+        tabulate_survey_response_results()
+
+        average = get_course_average()
+
+        print(average)
+
+        rating = get_faculty_rating(average)
+
+        print(rating)
+    elif(option == 3):
+        print('Exiting...')
