@@ -5,9 +5,9 @@ balance = a.get_balance()
 print(balance)
 
 
-amount = int(input("enter deposit amount: "))
+amount = int(input("enter withdraw amount: "))
 
-a.deposit(amount)
+a.withdraw(amount)
 balance = a.get_balance()
 
 print(balance)
