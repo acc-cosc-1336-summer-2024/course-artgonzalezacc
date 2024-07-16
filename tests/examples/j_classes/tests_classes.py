@@ -8,4 +8,13 @@ class Test_Config(unittest.TestCase):
         account = Account(500)
 
         self.assertEqual(500, account.get_balance())
+
+    def test_account_deposit(self):
+        account = Account(500)
+
+        self.assertEqual(500, account.get_balance())
+
+        account.deposit(100)
+
+        self.assertEqual(600, account.get_balance())
     
