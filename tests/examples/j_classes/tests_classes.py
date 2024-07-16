@@ -26,4 +26,52 @@ class Test_Config(unittest.TestCase):
         account.withdraw(100)
 
         self.assertEqual(400, account.get_balance())
+
+    def test_account_deposit_less_than_0(self):
+        account = Account(500)
+
+        self.assertEqual(500, account.get_balance())
+
+        account.deposit(-50)
+
+        self.assertEqual(500, account.get_balance())
+
+    def test_account_withdraw_less_than_0(self):
+        account = Account(500)
+
+        self.assertEqual(500, account.get_balance())
+
+        account.withdraw(-50)
+
+        self.assertEqual(500, account.get_balance())
+
+    def test_account_withdraw_more_than_balance(self):
+        account = Account(500)
+        self.assertEqual(500, account.get_balance())
+
+        account.withdraw(501)
+
+        self.assertEqual(500, account.get_balance())
+
+    def test_account_deposit_followed_by_withdraw(self):
+        account = Account(500)
+        self.assertEqual(500, account.get_balance())
+
+        account.deposit(100)
+        self.assertEqual(600, account.get_balance())
+
+        account.withdraw(50)
+        self.assertEqual(550, account.get_balance())
+
+    def test_account_withdraw_followed_by_deposit(self):
+
+        account = Account(500)
+        self.assertEqual(500, account.get_balance())
+
+        account.withdraw(100)
+        self.assertEqual(400, account.get_balance())
+
+        account.deposit(50)
+        self.assertEqual(450, account.get_balance())
+
     

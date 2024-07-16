@@ -12,3 +12,10 @@ balance = a.get_balance()
 
 print(balance)
 
+
+amount = int(input("enter deposit amount: "))
+
+a.deposit(amount)
+balance = a.get_balance()
+
+print(balance)
