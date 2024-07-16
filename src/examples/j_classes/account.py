@@ -14,7 +14,7 @@ class Account:
 
     def withdraw(self, amount):
         if(amount > 0 and amount <= self.__balance):
-            self.__balance -=
+            self.__balance -= amount
 
 
 
