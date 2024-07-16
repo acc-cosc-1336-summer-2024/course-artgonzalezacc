@@ -1,0 +1,11 @@
+import unittest
+
+from src.examples.j_classes.account import Account
+
+class Test_Config(unittest.TestCase):
+
+    def test_account_begin_balance(self):
+        account = Account(500)
+
+        self.assertEqual(500, account.get_balance())
+    
