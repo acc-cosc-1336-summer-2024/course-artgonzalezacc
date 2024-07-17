@@ -1,20 +1,16 @@
 import account
+import atm
 
 a = account.Account(0) #created a variable/object of the Account class type
 balance = a.get_balance()
 print(balance)
 
-amount = int(input("enter withdraw amount: "))
+atm = atm.ATM(a)
+atm.make_deposit()
 
-a.withdraw(amount)
-balance = a.get_balance()
+atm.display_balance()
 
-print(balance)
+atm.make_withdraw()
+atm.display_balance()
 
 
-amount = int(input("enter deposit amount: "))
-
-a.deposit(amount)
-balance = a.get_balance()
-
-print(balance)
