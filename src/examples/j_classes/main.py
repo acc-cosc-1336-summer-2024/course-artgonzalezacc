@@ -1,11 +1,13 @@
-import account
-import atm
+from src.examples.j_classes.atm import ATM
+from src.examples.j_classes.customer import Customer
 
-a = account.Account(0) #created a variable/object of the Account class type
+customer1 = Customer(100, 50)
+
+a = customer1.get_account(0)
 balance = a.get_balance()
 print(balance)
 
-atm = atm.ATM(a)
+atm = ATM(a)
 atm.make_deposit()
 
 atm.display_balance()
