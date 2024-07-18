@@ -1,4 +1,5 @@
 from src.examples.j_classes.atm import ATM
+from random import randint
 
 def display_menu():
     print('1-Display Balance')
@@ -6,19 +7,26 @@ def display_menu():
     print('3-Withdraw')
     print('4-Exit')
 
-def run_menu(customer):
+def run_menu(customers):
 
-    account_index = int(input("Enter 1 for checking 2 for savings: "))
-    account = customer.get_account(account_index - 1)
+    while(True):
+        num = input('Press Enter: ')
+        print(len(customers))
+        customer_index = randint(0, len(customers))
+        print(customer_index)
+        customer = customers[customer_index-1] # reference one customer
 
-    atm = ATM(account)
+        account_index = int(input("Enter 1 for checking 2 for savings: "))
+        account = customer.get_account(account_index - 1)
 
-    choice = -1
+        atm = ATM(account)
 
-    while choice != 4:
-        display_menu()
-        choice = int(input('Enter menu option: '))
-        handle_menu_option(choice, atm)
+        choice = -1
+
+        while choice != 4:
+            display_menu()
+            choice = int(input('Enter menu option: '))
+            handle_menu_option(choice, atm)
 
 def handle_menu_option(choice, atm):
     if(choice == 1):
