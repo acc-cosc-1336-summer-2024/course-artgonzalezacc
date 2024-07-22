@@ -1,6 +1,7 @@
 import unittest
 
 from src.examples.j_classes.die import Die
+from src.examples.j_classes.roll import Roll
 
 class Test_Config(unittest.TestCase):
 
@@ -11,3 +12,12 @@ class Test_Config(unittest.TestCase):
             roll_value = die.roll()
             self.assertEqual(True, roll_value >= 1)
             self.assertEqual(True, roll_value <= 6)
+
+    def test_rolls(self):
+        die1 = Die()
+        die2 = Die()
+
+        for i in range(0, 24):
+            roll = Roll(die1, die2)
+            self.assertEqual(True, roll.roll_value() >= 1)
+            self.assertEqual(True, roll.roll_value() <= 12)
